@@ -1,3 +1,8 @@
+"""Interactive CMD Line Menu
+
+This snippet can be used to generate a interactive prompt at the cmd 
+line interface.
+"""
 import sys
 
 function_1_arg, function_2_arg = 'arg1', 'arg2'
@@ -5,8 +10,10 @@ function_1_arg, function_2_arg = 'arg1', 'arg2'
 mainMenu = {}
 mainMenu['1'] = ('Option 1', function_1, function_1_arg)
 mainMenu['2'] = ('Option 2', function_2, function_2_arg)
+mainMenu['3'] = ('Exit.', sys.exit, 0)
+
 # ...
-# mainMenu['N'] = ('Option N', sys.exit, 0)
+# mainMenu['N'] = ('Option N', sys.exit, function_N_arg)
 
 def main():
     while True:
@@ -29,6 +36,10 @@ def function_1(arg1):
 def function_2(arg1):
     print("Welcome to function_2!")
     return
+
+# def function_N(arg1):
+#     print('Welcome to function_N!')
+#     return
 
 if __name__ == '__main__':
     main()
